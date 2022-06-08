@@ -17,6 +17,7 @@ text color (teal): #008080
   --secondary-text-color: #008080;
   --link-color: #357b70;
   --font-weight: 700;
+  --border-button: rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -80,12 +81,12 @@ a:active {
   padding: 10px;
   border-radius: 3px;
   transition: 0.2s opacity;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    &:hover {
+  border-bottom: 2px solid var(--border-button);
+    &:hover, &:focus {
         cursor: pointer;
         opacity: 0.8;
       }
-    }
+  }
 
 
 .button {
