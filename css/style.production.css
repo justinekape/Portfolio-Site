@@ -1,21 +1,4 @@
 /*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.12,
-* Autoprefixer: v10.4.4
-* Browsers: last 4 version
-*/
-
-/*
-colors used
-
-text color (darkslategray): #2f4f4f
-
-primary color (lightblue): #add8e6
-text color (midnightblue): #191970
-secondary color (lightcyan): #E0FFFF
-text color (teal): #008080
-
-/*
 colors used
 
 text color (darkslategray): #2f4f4f
@@ -28,8 +11,7 @@ text color (teal): #008080
 */
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -89,8 +71,6 @@ a:active {
   pading: 10px;
   border-radius: 3px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition: 0.2s opacity;
-  -o-transition: 0.2s opacity;
   transition: 0.2s opacity;
     &:hover {
       &: focus {
@@ -122,13 +102,8 @@ a:active {
 
 .page-footer {
     clear: both;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     text-align: center;
 }
 
@@ -140,25 +115,19 @@ a:active {
 
 
 .page-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   border-bottom: 1px solid darkgray;
 }
 
 .page-header_item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 200px;
-          flex: 0 1 200px;
+  flex: 0 1 200px;
   width: 100px;
   padding: 20px;
 }
 
 .page-header_item:last-child {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   text-align: right;
 }
 
@@ -166,14 +135,14 @@ a:active {
 .navigation-list {
   list-style-type: none;
 
-  li {
-    display: inline-block;
-    margin-left: 15px;
+    li {
+      display: inline-block;
+      margin-left: 15px;
 
       .navigation-list_item--active {
         text-decoration: none;
       }
-  }
+    }
 }
 
 
@@ -189,9 +158,7 @@ a:active {
 
 @supports (display: grid) {
   .grid {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     margin: 0;
@@ -206,10 +173,7 @@ a:active {
   }
 
   .grid_item:last-child {
-    -ms-grid-column: 3;
     grid-column: 3 / 3;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
     grid-row: 1 / 3;
   }
 }
@@ -222,18 +186,6 @@ a:active {
 
 .about-me_item {
   list-style-type: none;
-}
-
-@-webkit-keyframes color-change {
-  0% {
-    fill: #FFEFD4;
-  }
-  50% {
-    fill: #D4FFFA;
-  }
-  100% {
-    fill: #D9D4FF;
-  }
 }
 
 @keyframes color-change {
@@ -250,21 +202,18 @@ a:active {
 
 
 .temple {
-  -webkit-animation: 4s color-change infinite alternate linear;
-          animation: 4s color-change infinite alternate linear;
+  animation: 4s color-change infinite alternate linear;
 }
 
 
 
 @media all and (max-width: 500px) {
   .grid {
-    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 }
 @media all and (min-width: 501px) and (max-width: 750px) {
   .grid {
-    -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }

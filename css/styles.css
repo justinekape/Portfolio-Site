@@ -141,17 +141,17 @@ a:active {
 }
 
 
-.navigation-list { 
+.navigation-list {
   list-style-type: none;
   
-  li {
-    display: inline-block;
-    margin-left: 15px;
-  
+    li {
+      display: inline-block;
+      margin-left: 15px;
+      
       .navigation-list_item--active {
         text-decoration: none;
       }
-  }
+    }
 }
 
 
