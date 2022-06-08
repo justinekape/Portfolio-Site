@@ -111,7 +111,7 @@ a:active {
   border-radius: 3px;
   transition: 0.2s opacity;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    &:hover, &:focus {
+    &:hover {
         cursor: pointer;
         opacity: 0.8;
       }

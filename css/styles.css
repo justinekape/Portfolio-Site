@@ -120,7 +120,7 @@ a:active {
   border-radius: 3px;
   transition: 0.2s opacity;
   border-bottom: 2px solid var(--border-button);
-    &:hover, &:focus {
+    &:hover {
         cursor: pointer;
         opacity: 0.8;
       }
