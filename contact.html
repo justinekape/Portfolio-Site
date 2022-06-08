@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Justine Brown</title>
+  <link rel="icon" type="image/png" href="img/favicon.ico" sizes="16x16" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.production.css">
+</head>
+<body>
+
+  <header class="page-header">
+    <img src="img/jblogo.svg" alt="logo" class="page-header_item">
+    <nav class="main navigation page-header_item">
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation">
+          <a href="index.html" role="menuitem" class="navigation-list_item">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem" class="navigation-list_item">About Me</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="navigation-list_item">Work</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem" class="navigation-list_item navigation-list_item--active">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Contact</h1>
+    <p>
+      Justine Brown<br>
+      123 Main Street<br>
+      Virginia, USA<br>
+      <a href="mailto:justinebrown.va@gmail.com">Email</a><br>
+      Tel <a href="tel:+16192547376" aria-label="telephone-number-link">+1 6192547376</a><br>
+      Skype <a href="skype:ive:.cid.7568252cbf6f98f0">Justine</a><br>
+      <a href="mailto:justinebrown.va@gmail.com">Contact Me</a><br>
+    </p>
+  </section>
+  <form action="" method="post" id="contact-form">
+          <label class="standard-label" for="contact-email">*Email:</label>
+          <input type="email" id="contact-email" required>
+
+          <label class="standard-label" for="telephone">*Phone(###-###-####):</label>
+          <input type ="tel" id="telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
+
+          <label class="standard-label" for="message">*Message:</label>
+          <textarea maxlength="240" id="message" required></textarea>
+
+          <button type="button" value-"Send message">Submit</button>
+  </form>
+
+    <footer class="page-footer">
+       <p>Find me on</p>
+      <div class="social-media">
+        <img src="img/githubicon.svg" width="30px" height="30px" alt="Github">
+        <img src="img/twittericon.svg" width="30px" height="30px" alt="Twitter">
+        <img src="img/LinkedInicon.svg" width="30px" height="30px" alt="LinkedIn">
+      </div>
+    </footer>
+
+  <script src="js/tota11y.min.js"></script>
+  </body>
+</html>
