@@ -2,19 +2,7 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.12,
 * Autoprefixer: v10.4.4
-* Browsers: last 4 version
-*/
-
-/*
-colors used
-
-text color (darkslategray): #2f4f4f
-
-primary color (lightblue): #add8e6
-text color (midnightblue): #191970
-secondary color (lightcyan): #E0FFFF
-text color (teal): #008080
-
+* Browsers: last 2 version
 */
 
 * {
@@ -71,37 +59,66 @@ a:active {
   color: #489c79;
 }
 
-%button-shared {
+.button {
+  /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
+  /*takes the font from the outer container */
   font-family: inherit;
-  text-decoration: none;
-  pading: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition: 0.2s opacity;
-  -o-transition: 0.2s opacity;
-  transition: 0.2s opacity;
-    &:hover {
-      &: focus {
-        cursor: pointer;
-        opacity: 0.8;
-      }
-    }
-}
-
-.button {
-  @extend %button-shared;
+  /* styles the background color, font color, and text decoration (underline etc) of the button */
   background-color: #add8e6;
   color: #191970;
+  text-decoration: none;
+  /* adds spacing to the button */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
 }
 
-.button_secondary {
-  @extend %button-shared;
+button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /*takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline etc) of the button */
+  background-color: #add8e6;
+  color: #191970;
+  text-decoration: none;
+  /* adds spacing to the button */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over a button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+.button__secondary {
   background-color: #E0FFFF;
   color: #008080;
 }
 
+.navigation-list_item--active {
+  text-decoration: none;
+}
 
 .profile_portrait {
   float: left;
@@ -152,20 +169,14 @@ a:active {
   text-align: right;
 }
 
-
-.navigation-list {
+.navigation-list { /*erases dots from list */
   list-style-type: none;
-  li {
-    .navigation-list_item {
-      display: inline-block;
-      margin-left: 15px;
-      .navigation-list_item--active {
-        text-decoration: none;
-      }
-    }
-  }
 }
 
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
 
 
 /* start of grid fallback */

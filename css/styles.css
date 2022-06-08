@@ -72,43 +72,35 @@ a:active {
   color: #489c79;
 }
 
-.button,button {
-  /* overwrites browser defaults and resets the border */
+%button-shared {
   border: none;
   display: inline-block;
-  /*takes the font from the outer container */
   font-family: inherit;
-  /* styles the background color, font color, and text decoration (underline etc) of the button */
+  text-decoration: none;
+  pading: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.2s opacity;
+    &:hover {
+      &: focus {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+}
+
+.button {
+  @extend %button-shared;
   background-color: var(--primary-color);
   color: var(--primary-text-color);
-  text-decoration: none;
-  /* adds spacing to the button */
-  padding: 10px;
-  border-radius: 3px;
-  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  transition-duration: 0.2s;
-  transition-property: opacity;
 }
 
-button:hover,
-button:focus,
-.button:hover,
-.button:focus {
-  /* lets the mouse appear as a hand when hovering over a button */
-  cursor: pointer;
-  /* reduces the opacity of the button to 80% */
-  opacity: 0.8;
-}
-
-.button__secondary {
+.button_secondary {
+  @extend %button-shared;
   background-color: var(--secondary-color);
   color: var(--secondary-text-color);
 }
 
-.navigation-list_item--active {
-  text-decoration: none;
-}
 
 .profile_portrait {
   float: left;
@@ -148,14 +140,20 @@ button:focus,
   text-align: right;
 }
 
-.navigation-list { /*erases dots from list */
+
+.navigation-list { 
   list-style-type: none;
+  li {
+    .navigation-list_item {
+      display: inline-block;
+      margin-left: 15px;
+      .navigation-list_item--active {
+        text-decoration: none;
+      }
+    }
+  }
 }
 
-.navigation-list li {
-  display: inline-block;
-  margin-left: 15px;
-}
 
 
 /* start of grid fallback */
